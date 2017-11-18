@@ -1,2 +1,3 @@
 language: none
+install: sudo apt install pari-gp
 script: ./test.sh
