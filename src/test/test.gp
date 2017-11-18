@@ -1,24 +1,22 @@
-my(allpassed=true, testname="none", allcurrentpassed=true);
+my(allpassed=1, testname="none", allcurrentpassed=1);
 
 newtest(name) =
 {
-    allcurrentpassed=true
+    allcurrentpassed=1;
     testname = name;
 }
 
 assert(test) = {
-    if(!test, allcurrentpassed=false)
+    if(!test, allcurrentpassed=0);
 }
 
 stoptest() = 
 {
-    print(" - ", testname, if(allcurrentpassed, " succeeded", " failed"));
-    
-    if(!allcurrentpassed, allpassed=false)
+    print(" - ", testname, if(allcurrentpassed, " [succeeded]", " [failed]"));
+    if(!allcurrentpassed, allpassed=0);
 }
 
 testcomplete() =
 {
-    print(if(allpassed, "All tests passed", "Some tests failed"))
-    \q
+    quit(if(allpassed, 0, 1));
 }
