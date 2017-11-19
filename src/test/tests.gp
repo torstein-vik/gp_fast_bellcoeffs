@@ -10,11 +10,11 @@ assert(#bc == terms);
 for(n=1, terms, assert(bc[n] == 1););
 
 stoptest();
-newtest("Basic {1}/Ø test with 1000 terms");
+newtest("Basic {1}/Ø test with 2000 terms");
 
 my(X, bc, terms);
 X = [[1, 1]]
-terms = 1000;
+terms = 2000;
 
 bc = bellcoeffs(X, terms);
 
