@@ -5,5 +5,4 @@ before_script: chmod +x test.sh
 script: ./test.sh
 
 notifications:
-    email:
-        on_success: never
+    email: never
