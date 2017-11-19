@@ -22,6 +22,18 @@ assert(#bc == terms);
 for(n=1, terms, assert(bc[n] == 1););
 
 stoptest();
+newtest("Basic {1}/Ø test with 20000 terms");
+
+my(X, bc, terms);
+X = [[1, 1]]
+terms = 20000;
+
+bc = bellcoeffs(X, terms);
+
+assert(#bc == terms);
+for(n=1, terms, assert(bc[n] == 1););
+
+stoptest();
 newtest("Basic {2}/Ø test with 20 terms");
 
 my(X, bc, terms);
