@@ -1,3 +1,4 @@
-language: none
+language: generic
+sudo: true
 install: sudo apt install pari-gp
 script: ./test.sh
