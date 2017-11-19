@@ -1,8 +1,12 @@
 bellcoeffs(symbol, terms) = 
 {
-    my(output=List());
+    my(recursionSer = Ser(1, 'x, terms), initialSer = Ser(1, 'x, terms));
+
+    my(fac);
+    for(i=1,#symbol,
+        fac = 1 - symbol[i][1]*'x;
+        if(symbol[i][2] > 0, recursionSer *= fac, initialSer *= fac)
+    );
     
-    for(n=1, terms, listput(output, 1));
-    
-    output
+    Vec(initialSer*(1/recursionSer))
 }
