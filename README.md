@@ -45,7 +45,7 @@ This framework is and will remain completely open source, under the GNU General 
 
 ## Languages/Frameworks
 
-* Implentation: Pari/GP
+* Implementation: Pari/GP
 * Test tool: Shell
 
 ## Folder structure
